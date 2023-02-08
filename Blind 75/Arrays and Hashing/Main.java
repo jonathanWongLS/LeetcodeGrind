@@ -1,8 +1,11 @@
+
+
 public class Main {
     public static void main(String[] args) {
         ContainsDuplicate solution1 = new ContainsDuplicate();
         ValidAnagram solution2 = new ValidAnagram();
         TwoSum solution3 = new TwoSum();
+        GroupAnagrams solution4 = new GroupAnagrams();
 
         int [] nums = {1,2,3,1};
         System.out.println("Contains Duplicate: " + solution1.containsDuplicate(nums));
@@ -14,5 +17,9 @@ public class Main {
         int target = 6;
         int[] arraySolution = solution3.twoSum(twoSumsNums, target);
         System.out.println("Two Sum: " + arraySolution[0] + ", " + arraySolution[1]);
+
+        String[] strs = {"eat","tea","tan","ate","nat","bat"};
+        System.out.println(solution4.groupAnagrams(strs));
     }
+
 }

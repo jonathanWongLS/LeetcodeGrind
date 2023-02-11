@@ -7,6 +7,7 @@ public class Main {
         TwoSum solution3 = new TwoSum();
         GroupAnagrams solution4 = new GroupAnagrams();
         TopKFrequentElements solution5 = new TopKFrequentElements();
+        ProductOfArrayExceptSelf solution6 = new ProductOfArrayExceptSelf();
 
         int [] nums = {1,2,3,1};
         System.out.println("Contains Duplicate: " + solution1.containsDuplicate(nums));
@@ -25,6 +26,10 @@ public class Main {
         int[] topKNums = {1,1,1,2,2,3,3};
         int k = 2;
         System.out.println(Arrays.toString(solution5.topKFrequent(topKNums, k)));
+        
+        int[] nums6 = {1,2,3,4};
+        System.out.println(Arrays.toString(solution6.productExceptSelf(nums6)));
+        
     }
 
 }

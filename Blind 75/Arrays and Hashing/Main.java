@@ -1,4 +1,4 @@
-
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,6 +6,7 @@ public class Main {
         ValidAnagram solution2 = new ValidAnagram();
         TwoSum solution3 = new TwoSum();
         GroupAnagrams solution4 = new GroupAnagrams();
+        TopKFrequentElements solution5 = new TopKFrequentElements();
 
         int [] nums = {1,2,3,1};
         System.out.println("Contains Duplicate: " + solution1.containsDuplicate(nums));
@@ -20,6 +21,10 @@ public class Main {
 
         String[] strs = {"eat","tea","tan","ate","nat","bat"};
         System.out.println(solution4.groupAnagrams(strs));
+
+        int[] topKNums = {1,1,1,2,2,3,3};
+        int k = 2;
+        System.out.println(Arrays.toString(solution5.topKFrequent(topKNums, k)));
     }
 
 }

@@ -8,6 +8,7 @@ public class Main {
         GroupAnagrams solution4 = new GroupAnagrams();
         TopKFrequentElements solution5 = new TopKFrequentElements();
         ProductOfArrayExceptSelf solution6 = new ProductOfArrayExceptSelf();
+        EncodeAndDecode solution7 = new EncodeAndDecode();
 
         int [] nums = {1,2,3,1};
         System.out.println("Contains Duplicate: " + solution1.containsDuplicate(nums));
@@ -30,6 +31,11 @@ public class Main {
         int[] nums6 = {1,2,3,4};
         System.out.println(Arrays.toString(solution6.productExceptSelf(nums6)));
         
+        List<String> strs7 = Arrays.asList("hey", "ther#$", "me name", "is");
+        // String str7 = "4#lin#4#code1##3#you";
+        String encodedString = solution7.encode(strs7);
+        System.out.println(encodedString);
+        System.out.println(solution7.decode(encodedString));
     }
 
 }

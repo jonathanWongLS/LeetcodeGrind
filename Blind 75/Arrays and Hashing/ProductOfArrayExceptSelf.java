@@ -1,4 +1,3 @@
-import java.util.*;
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
         int[] product = new int[nums.length];

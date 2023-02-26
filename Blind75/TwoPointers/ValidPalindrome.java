@@ -1,5 +1,3 @@
-package Blind75.TwoPointers;
-
 public class ValidPalindrome {
     public boolean isPalindrome(String s) {
         

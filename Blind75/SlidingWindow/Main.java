@@ -5,6 +5,7 @@ public class Main {
         BestTimeToBuySellStock solution1 = new BestTimeToBuySellStock();
         LongestSubstringWithoutRepeatingCharacters solution2 = new LongestSubstringWithoutRepeatingCharacters();
         RepeatingCharacterReplacement solution3 = new RepeatingCharacterReplacement();
+        MinWindowSubstring solution4 = new MinWindowSubstring();
 
         int[] ar1 = {7,1,5,3,6,4};
         System.out.println("Best Time to Buy and Sell Stock: " + Integer.toString(solution1.maxProfit(ar1)));
@@ -18,6 +19,9 @@ public class Main {
         int k = 1;
         System.out.println("Longest Repeating Character Replacement: " + Integer.toString(solution3.characterReplacement(str4, k)));
 
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        System.out.println("Minimum Window Substring: " + solution4.minWindow(s, t));
     }
 
 }

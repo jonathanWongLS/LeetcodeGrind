@@ -28,7 +28,6 @@ public class EncodeAndDecode {
         // Get the first number (m), skip the delimitter and add the next m characters as a string into an array
         int stringLength = 0;
         List<String> decodedStrings = new ArrayList<>();
-        int indexStringEnd = 0;
         String stringElement = "";
 
         for (int i = 0; i < str.length(); i++) {

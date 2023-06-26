@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         ReverseLinkedList solution1 = new ReverseLinkedList();
         MergeTwoSortedLists solution2 = new MergeTwoSortedLists();
+        ReorderList solution3 = new ReorderList();
 
         LinkedList linkedList1 = new LinkedList();
         int[] nodePayload1 = {-3, 0, 1, 2, 3, 4, 5};
@@ -41,6 +42,21 @@ public class Main {
         }
 
 
-        
+        LinkedList linkedList3 = new LinkedList();
+        int[] nodePayload3 = {1,2,3,4};
+        ListNode head3 = linkedList3.createLinkedList(nodePayload3);
+
+        solution3.reorderList(head3);
+
+        System.out.println(head3);
+
+        while (head3 != null) {
+            System.out.println(head3.val);
+            head3 = head3.next;
+            if (head3 == null) {
+                System.out.println("null");
+            }
+        }
+
     }
 }

@@ -47,4 +47,52 @@ public class LinkedList {
 
         return this.head;
     }
+
+    public ListNode createLinkedListWithCycle(int[] nodePayload, int pos) {
+        ListNode currentNode = null;
+        ListNode tailNext = null;
+        int i = 0;
+
+        if (nodePayload.length == 0) {
+            System.out.println("Node 0: null\n");
+            return this.head;
+        }
+
+        if (nodePayload.length == 1) {
+            this.head = new ListNode(nodePayload[0]);
+            System.out.println("Node 0: " + nodePayload[0]);
+            System.out.println("Node 1: null\n");
+            return this.head;
+        }
+
+        for (i = 0; i < nodePayload.length; i++) {
+            if (i == 0) {
+                currentNode = new ListNode(nodePayload[i]);
+                this.head = currentNode;
+                System.out.println("Node " + Integer.toString(i) + ": " + nodePayload[i]);
+                currentNode.next = new ListNode(nodePayload[++i]);
+                System.out.println("Node " + Integer.toString(i) + ": " + nodePayload[i]);
+            }     
+            else {
+                System.out.println("Node " + Integer.toString(i) + ": " + nodePayload[i]);
+                currentNode.next = new ListNode(nodePayload[i]);
+            }
+
+            currentNode = currentNode.next;
+            
+            if (i == pos) {
+                tailNext = currentNode;
+            }
+        }
+        if (pos == 0) {
+            currentNode.next = this.head;
+        }   
+        else {
+            currentNode.next = tailNext;
+        }
+
+        System.out.println("Node " + Integer.toString(i) + ": null\n");
+
+        return this.head;
+    }
 }

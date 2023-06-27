@@ -1,10 +1,22 @@
 package Blind75.LinkedList;
 
 public class Main {
+
+    public static void printLinkedList(ListNode head) {
+        while (head != null) {
+            System.out.println(head.val);
+            head = head.next;
+            if (head == null) {
+                System.out.println("null");
+            }
+        }
+    }
+
     public static void main(String[] args) {
         ReverseLinkedList solution1 = new ReverseLinkedList();
         MergeTwoSortedLists solution2 = new MergeTwoSortedLists();
         ReorderList solution3 = new ReorderList();
+        RemoveNthNodeFromEndofList solution4 = new RemoveNthNodeFromEndofList();
 
         LinkedList linkedList1 = new LinkedList();
         int[] nodePayload1 = {-3, 0, 1, 2, 3, 4, 5};
@@ -33,13 +45,7 @@ public class Main {
         
         System.out.println(head2);
 
-        while (head2 != null) {
-            System.out.println(head2.val);
-            head2 = head2.next;
-            if (head2 == null) {
-                System.out.println("null");
-            }
-        }
+        printLinkedList(head2);
 
 
         LinkedList linkedList3 = new LinkedList();
@@ -50,13 +56,16 @@ public class Main {
 
         System.out.println(head3);
 
-        while (head3 != null) {
-            System.out.println(head3.val);
-            head3 = head3.next;
-            if (head3 == null) {
-                System.out.println("null");
-            }
-        }
+        printLinkedList(head3);
+
+
+        LinkedList linkedList4 = new LinkedList();
+        int[] nodePayload4 = {1,2,3,4,5};
+        ListNode head4 = linkedList4.createLinkedList(nodePayload4);
+
+        head4 = solution4.removeNthFromEnd(head4, 2);
+        System.out.println(head4);
+        printLinkedList(head4);
 
     }
 }

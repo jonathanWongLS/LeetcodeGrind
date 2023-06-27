@@ -17,6 +17,7 @@ public class Main {
         MergeTwoSortedLists solution2 = new MergeTwoSortedLists();
         ReorderList solution3 = new ReorderList();
         RemoveNthNodeFromEndofList solution4 = new RemoveNthNodeFromEndofList();
+        LinkedListCycle solution5 = new LinkedListCycle();
 
         LinkedList linkedList1 = new LinkedList();
         int[] nodePayload1 = {-3, 0, 1, 2, 3, 4, 5};
@@ -66,6 +67,13 @@ public class Main {
         head4 = solution4.removeNthFromEnd(head4, 2);
         System.out.println(head4);
         printLinkedList(head4);
+
+
+        LinkedList linkedList5 = new LinkedList();
+        int[] nodePayload5 = {1,2};
+        ListNode head5 = linkedList5.createLinkedListWithCycle(nodePayload5, 0);
+
+        System.out.println(solution5.hasCycle(head5));
 
     }
 }

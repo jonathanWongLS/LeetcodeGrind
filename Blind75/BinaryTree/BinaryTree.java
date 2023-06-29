@@ -1,7 +1,14 @@
 package Blind75.BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
     TreeNode root;
+
+    public BinaryTree () {
+        this.root = null;
+    };
 
     public BinaryTree (int[] nodeValues) {
         this.root = null;
@@ -44,4 +51,60 @@ public class BinaryTree {
             }
         }
     }
+
+    public void printInorder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        printInorder(node.left);
+
+        System.out.print(node.val + " ");
+
+        printInorder(node.right);
+
+    }
+
+    public void printPreorder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        System.out.print(node.val + " ");
+
+        printPreorder(node.left);
+
+        printPreorder(node.right);
+    }
+
+    public void printPostorder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        printPostorder(node.left);
+
+        printPostorder(node.right);
+
+        System.out.print(node.val + " ");
+    }
+
+    public void printLevelOrder(TreeNode node) {
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(node);
+
+        while(!queue.isEmpty()) {
+            TreeNode currentNode = queue.poll();
+            System.out.print(currentNode.val + " ");
+
+            if (currentNode.left != null) {
+                queue.add(currentNode.left);
+            } 
+
+            if (currentNode.right != null) {
+                queue.add(currentNode.right);
+            }
+        }
+    }
+
 }

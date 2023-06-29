@@ -8,12 +8,20 @@ public class Main {
         int[] nodeValues1b = {2,1,3}; 
         BinaryTree tree1 = new BinaryTree(nodeValues1a);
         
-        new TreePrinter(tree1).print(System.out);
-        System.out.println('\n');
+        tree1.printInorder(tree1.root);
+        System.out.println("");
+        tree1.printPreorder(tree1.root);
+        System.out.println("");
+        tree1.printPostorder(tree1.root);
+        System.out.println("");
+        tree1.printLevelOrder(tree1.root);
 
-        solution1.invertTree(tree1.root);
+        // new TreePrinter(tree1).print(System.out);
+        // System.out.println('\n');
+
+        // solution1.invertTree(tree1.root);
         
-        new TreePrinter(tree1).print(System.out);
+        // new TreePrinter(tree1).print(System.out);
 
     }
 }

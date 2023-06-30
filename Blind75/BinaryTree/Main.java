@@ -15,7 +15,8 @@ public class Main {
         tree1.printPostorder(tree1.root);
         System.out.println("");
         tree1.printLevelOrder(tree1.root);
-
+        System.out.println("");
+        tree1.printBoundary(tree1.root);
         // new TreePrinter(tree1).print(System.out);
         // System.out.println('\n');
 

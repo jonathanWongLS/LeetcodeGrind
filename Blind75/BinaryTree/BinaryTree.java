@@ -107,4 +107,67 @@ public class BinaryTree {
         }
     }
 
+    // Boundary traversal
+    public static void printLeftBoundary(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        if (root.left != null || root.right != null) {
+            System.out.println(root.val + " ");
+        }
+        
+        if (root.left != null) {
+            printLeftBoundary(root.left);
+        }
+        else {
+            printLeftBoundary(root.right);
+        }
+    }
+
+    public static void printRightBoundary(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        
+        if (root.right != null) {
+            printRightBoundary(root.right);
+        }
+        else {
+            printLeftBoundary(root.left
+            );
+        }
+
+        if (root.left != null || root.right != null) {
+            System.out.println(root.val + " ");
+        }
+    }
+
+    public static void printLeaves(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        printLeaves(root.left);
+
+        if (root.left == null && root.right == null) {
+            System.out.println(root.val + " ");
+        }
+
+        printLeaves(root.right);
+    }
+
+    public void printBoundary(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        System.out.println(root.val + " ");
+
+        printLeftBoundary(root.left);
+        printLeaves(root.left);
+        printLeaves(root.right);
+        printRightBoundary(root.right);
+    }
+
 }
